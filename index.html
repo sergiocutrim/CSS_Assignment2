@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lyrics Website</title>
+    <meta name="Sergio Cutrim Gouveia" content="Assignment 2 CSS">
+    <link rel="stylesheet" href="styles.css">
+    <!-- included below the google fonts that I am importing from google-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Indie+Flower&family=Montserrat:wght@400;700&family=Explora&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!--created a hamburguer menu by including 3 div inside a div, the definition comes from the css-->
+        <!--included 1 function that we learned in html class last semester it is in the end of the document-->
+        <div class="hamburguer" onclick="myFunction(this)" onmouseover="this.style.cursor='pointer'">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <!--declared the name of the website, or its logo name as h1 and configured in css-->
+        <h1>Lyrics</h1>
+        <!-- included the button about so user can send a message-->
+        <a class="contact" href="contact.html">Contact </a>
+    </header>
+    <nav id="menu">
+        <!-- to do the hamburguer menu we need to create the links by nav separated from header-->
+        <a href="about.html">About</a>
+        <a href="index.html">Yellow Ledbetter</a>
+        
+    </nav>    
+    <main>
+        <!-- the entire page content is the music lyrics, I am just adding the name of music, name of band and a picture to look more professional-->
+         <!--in the end I will add the video just to make it more professional looking-->
+        <div class="container"> 
+            <div class="lyrics-container">
+                <!--included the image on the begining-->
+                <img src="images/ten_album_cover.jpg" class="album-cover">
+                <!--included the title of song and below it the name of the band-->
+                <h1 class="h1body"> Yellow Ledbetter</h1>
+                <h2 class="h2body"> Pearl Jam</h2>
+                <!--from now on it is the lyrics of the song-->
+                <p>Unsealed on a porch a letter sat<br>
+                Then you said I wanna leave it again<br>
+                Once I saw her on a beach of weathered sand<br>
+                And on the sand I wanna leave it again, yeah<br> <br>
+                On a weekend, <span class ="sad">wanna wish it all away</span>, yeah<br>
+                And they called and I said that I want what I said<br>
+                And then I call out again<br>
+                <span class ="sad">And the reason oughta leave her calm, I know<br>
+                I said, I don't know whether I'm the boxer or the bag</span></p>
+                <p class="chorus">Oh yeah, can you see them out on the porch?<br>
+                Yeah, but they don't wave<br>
+                I see them 'round the front way, yeah<br>
+                And I know and I know, I don't wanna stay</p>
+                <p>Make me cry</p>
+                <p class="guitar-solo">[Guitar Solo]</p>
+                <p>I see<br>
+                I don't know, why, there's something else<br>
+                I wanna drum it all away, oh, I said I<br>
+                I don't, I don't know whether there's the boxer or the bag</p>
+                <p class="chorus"> Chorus </p>
+                <p>I don't wanna stay<br>
+                I don't wanna stay<br>
+                I don't wanna stay, I don't, no<br>
+                Yeah</p>
+                <p class="chorus">Oh, oh-oh-oh-oh<br>
+                Oh, oh-oh-oh-oh</p>
+            </div>
+            
+            <div class="video-container">
+                <!--the entire link was copied from youtube embed video feature-->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iYtBMgLfqKQ?si=MWveyhXTMbxqSF_o" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+    </main>
+    <!--insert a script as learned in the HTML and Java class just to make the burguer stay when clicked and open the nav when clicked-->
+    <script>
+        
+        function myFunction(x) {
+            x.classList.toggle("change");
+            document.getElementById("menu").classList.toggle("show");
+          }
+        </script>
+</body>
+</html>

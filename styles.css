@@ -1,0 +1,149 @@
+/*-------------------------------------------------------------------Header configuration-------------------------------------------------------*/
+header {
+    display: flex; /*header will be flex position, so all can be adjusted to the desired position*/
+    justify-content: space-between; /*alignment will be done considering the space between the div*/
+    align-items: center; /*vertically in the middle of banner*/
+    background-color: #282828; /*set color of back*/
+    color: #f0db4f; /*set font color*/
+    padding: 5px; /*set the space before*/
+}
+
+/*inside the header we have the hamburguer menu, we set the same display with a column direction */
+.hamburger {
+    display: flex; 
+    flex-direction: column;
+}
+
+/*when you pass the mouse on the hamburguer it changes to pointer mouse*/
+.hamburger:hover, .hamburger:focus {
+    cursor: pointer;
+}
+
+/*creating the lines of the hamburguer*/
+.bar1, .bar2, .bar3 {
+  width: 35px; /*change the size*/
+  height: 2px; /*change the height*/
+  background-color: #f0db4f; 
+  margin: 6px 0; /*give a margin to separate the lines*/
+}
+
+/*adjusting the letter of the page title in the banner*/
+header h1 {
+    font-family: 'Indie Flower', cursive; /*using a google font that I think it looks nice as a main title*/
+    font-size: 2.5em;
+    margin: 0; /*remove margin so it does not increase the size of banner*/
+}
+
+/*adjusting the Contact that I named as contact*/
+.contact {
+    font-family: 'Roboto', sans-serif; /*inserted a different google font*/
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-right: 5px; /*to give some space in the end*/
+    text-decoration: none;  /*removed the underline for link*/
+    color: inherit; /*removed the color of link*/
+}
+
+/*the hamburguer needs the nav menu separated from the button*/
+nav {
+    display: none; 
+    flex-direction: column; /*organize each of the menus as a new line*/
+    position: absolute;
+    top: 60px; /*makes the menu open after the hamburguer*/
+    left: 10px; /*makes the menu open to the left of the hamburguer*/
+    background-color: #282828; /*same color of the banner*/
+    padding: 10px; 
+}
+/* define the color and remove the link configuration so it always look the same when opening the hamburguer*/
+nav a {
+    color: #f0db4f;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+/*when the nav is showing it should be flex*/
+nav.show {
+    display: flex;
+}
+
+
+/*------------------------------------------------------------------BODY--------------------------------------------------------------------*/
+
+/*included a general format for the body, with a font from google fonts*/
+.container {
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #464646c8; /*all grey background*/
+    margin: 0;
+    padding: 5px; /*the whole page has a padding of 5px to look more professional*/
+    line-height: 1.6; /*gives more space to all the text to see it clearly*/
+    display: flex; /*flex display to have the containers of video and lyrics that can move*/
+    justify-content: space-between; /*separate all containers by their space*/
+}
+
+/*the lyrics container will occupy 60%, white background and has a margin left so the burguer menu doesn`t fall on the text*/
+.lyrics-container{
+    width:60%;
+    background-color:white;
+    padding: 10px;
+    margin-left: 130px;
+}
+
+/*the video container has 40% floats to the right and has a margin to be visible wherever you are on the page*/
+.video-container{
+    width: 40%;
+    float: right;
+    box-sizing: border-box;
+    margin-top: 300px;
+    padding:10px;
+}
+
+/*treating the image of the album that I inserted to be on the side of the name of band and music*/
+.album-cover{
+    float: left; /*so it stays left of the text on the page*/
+    border-radius: 50%; /*put a circle around the image to make it look nice*/
+    width: 90px; /* adjusted the size with width and height to make the same size as name of band and music title*/
+    height: 90px;
+    margin-right: 20px; /*give a margin so the text that comes after has some distance*/
+    margin-top: 20px; /*gives some space from the top*/
+}
+
+/*adjusting the title and music name*/
+.h1body{
+    margin-top: 15px; /*some space to align with the image*/
+    color: red;
+    margin-bottom: 0;
+}
+.h2body{
+    color: #f0db4f;
+    margin-top: 0px; /*reduce distance to line above*/
+    margin-bottom: 50px; /*adds some space to start the lyrics*/
+}
+
+/*adding some different fonts to the lyrics*/
+.chorus {
+    font-family: 'Explora', serif; /*chorus in a different font to be easier to see*/
+    font-size: 1.7em; /*bigger font to call attention*/
+    font-weight: bold;
+
+}
+
+.guitar-solo {
+    font-family: 'Roboto', sans-serif; /*distinc letter to show the solo of guitar, but since it is melodic it matches a Robot font*/
+    font-style: italic;
+    color: #970909;
+}
+
+.sad {
+    font-family: 'Montserrat', cursive;
+    color: #732a90; /*a violet near blue to represent the sadness*/
+    font-weight: 800; /*bold and strong to show better*/
+    font-style: italic;
+
+}
+
+ /*----------------------------------------------------------------About-------------------------------------------------------------*/ 
+
+ .about {
+    margin-left: 180px;
+}
+

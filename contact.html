@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <meta name="Sergio Cutrim Gouveia" content="Assignment 2 CSS">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Indie+Flower&family=Montserrat:wght@400;700&family=Explora&display=swap" rel="stylesheet">
+</head>
+<body>
+        <main>
+        <header>
+            <!--created a hamburguer menu by including 3 div inside a div, the definition comes from the css-->
+            <!--included 1 function that we learned in html class last semester it is in the end of the document-->
+            <div class="hamburguer" onclick="myFunction(this)" onmouseover="this.style.cursor='pointer'">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <!--declared the name of the website, or its logo name as h1 and configured in css-->
+            <h1>Lyrics</h1>
+            <!-- included the button about so user can send a message-->
+            <a class="contact" href="contact.html">Contact </a>
+        </header>
+        <nav id="menu">
+            <!-- to do the hamburguer menu we need to create the links by nav separated from header-->
+            <a href="about.html">About</a>
+            <a href="index.html">Yellow Ledbetter</a>
+            
+        </nav>    
+        
+    
+    <div class="about"> 
+        <h2>COMP1054 - Interface Design Using CSS</h2>
+        <p>Professor: Sayed Alam</p>
+        <p>Name: Sergio Cutrim Gouveia</p>
+        <p>Student ID: 200579843</p>
+        <h3>Assignment 2 (CSS)</h3>
+
+        <p>If you need to contact me send me an email: <a href="mailto:200579843@student.georgianc.on.ca">200579843@student.georgianc.on.ca</a></p>
+
+
+    </main>
+    <!--insert a script as learned in the HTML and Java class just to make the burguer stay when clicked and open the nav when clicked-->
+    <script>
+        
+        function myFunction(x) {
+            x.classList.toggle("change");
+            document.getElementById("menu").classList.toggle("show");
+          }
+        </script>
+</body>
+</html>
